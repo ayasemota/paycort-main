@@ -10,7 +10,7 @@ export default function Hero() {
   
   // We start the movement later (0.1) and limit the upward travel
   // This ensures the mockup stays below the buttons while they are visible
-  const y = useTransform(scrollYProgress, [0, 0.3], [0, -60]);
+ const y = useTransform(scrollYProgress, [0, 0.5], [0, -40]);
   const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 1]); // Placeholder for logic
 
   return (
@@ -58,7 +58,7 @@ export default function Hero() {
       {/* --- THE FIX: Increased mt-24 to mt-32/40 and refined parallax --- */}
       <motion.div 
         style={{ y }} 
-        className="relative mt-24 w-full max-w-5xl px-4 md:mt-32"
+        className="relative mt-28 w-full max-w-5xl px-4 md:mt-36"
       >
         <div className="relative rounded-t-3xl border-x border-t border-zinc-200 bg-white p-2 shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.05)]">
           {/* Mockup Header */}
