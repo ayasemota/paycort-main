@@ -29,7 +29,7 @@ const features = [
 
 export default function FeaturesGrid() {
   return (
-    <section className="relative z-20 py-24 md:py-32 bg-white">
+    <section id="features" className="relative z-20 py-24 md:py-32 bg-white" >
       <div className="container mx-auto px-6">
         {/* Header for the Features - Acts as a buffer */}
         <div className="mb-16 text-center md:mb-24">

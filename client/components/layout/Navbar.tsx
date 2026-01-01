@@ -13,9 +13,10 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
 
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

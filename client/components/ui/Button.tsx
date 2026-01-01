@@ -22,7 +22,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({ 
   children, 
   variant = "primary", 
-  className, 
+  className,
+  onClick,
   ...props 
 }: ButtonProps) {
   const variants = {
@@ -41,6 +42,7 @@ export default function Button({
         variants[variant],
         className
       )}
+      onClick={onClick}
       {...props}
     >
       {children}
