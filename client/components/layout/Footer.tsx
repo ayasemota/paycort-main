@@ -29,7 +29,7 @@ export default function Footer() {
               Ready to experience <br className="hidden md:block" />
               <span className="text-brand-green">effortless tax management?</span>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg text-zinc-400">
+            <p className="mx-auto mt-6 max-w-xl text-sm md:text-lg text-zinc-400">
               Join thousands of Nigerians who are already staying ahead of their taxes with clarity and confidence.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

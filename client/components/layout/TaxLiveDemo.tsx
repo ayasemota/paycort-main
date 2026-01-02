@@ -29,10 +29,10 @@ export default function TaxLiveDemo() {
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-brand-green/10 text-brand-green">
               <Calculator size={20} />
             </div>
-            <h2 className="text-4xl font-extrabold tracking-tight text-zinc-900 md:text-5xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 md:text-5xl">
               Clarity in <span className="text-brand-green">seconds</span>, not days.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-zinc-500">
+            <p className="mt-6 text-sm md:text-lg leading-relaxed text-zinc-500">
               Stop guessing. Paycort AI analyzes your income streams and applies the latest Nigerian tax laws to give you an exact breakdown of your liabilities instantly.
             </p>
             

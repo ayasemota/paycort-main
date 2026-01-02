@@ -39,7 +39,7 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="mb-20">
           <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-zinc-400 mb-4">The Process</h2>
-          <h3 className="text-4xl font-extrabold tracking-tight text-zinc-900 md:text-5xl">
+          <h3 className="text-3xl font-extrabold tracking-tight text-zinc-900 md:text-5xl">
             From chaos to <span className="text-brand-green">clarity</span>.
           </h3>
         </div>
@@ -68,8 +68,8 @@ export default function HowItWorks() {
                   <div className={`mb-6 flex h-12 w-12 items-center justify-center rounded-2xl ${i === 1 ? 'bg-white/10' : 'bg-brand-green/10'}`}>
                     {step.icon}
                   </div>
-                  <h4 className="text-2xl font-bold text-zinc-900 mb-4">{step.title}</h4>
-                  <p className="text-zinc-500 leading-relaxed text-lg">
+                  <h4 className="text-xl md:text-2xl font-bold text-zinc-900 mb-4">{step.title}</h4>
+                  <p className="text-zinc-500 leading-relaxed text-sm md:text-lg">
                     {step.desc}
                   </p>
                 </div>
