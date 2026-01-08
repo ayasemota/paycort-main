@@ -4,10 +4,12 @@ import React, { useEffect, useState } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { Plus, ListFilter, Loader2 } from "lucide-react";
 import BottomNav from "@/app/dashboard/BottomNav";
+import { useNavigation } from '@/hooks/use-navigation';
 
 export default function DashboardPage() {
   const [user, setUser] = useState<any>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const {navigateTo} = useNavigation();
 
   useEffect(() => {
     setIsMounted(true);
@@ -139,7 +141,7 @@ export default function DashboardPage() {
             Quick Actions
           </h3>
           <div className="grid grid-cols-2 gap-4">
-            <button className="flex flex-col items-center gap-3 p-6 rounded-3xl bg-brand-green text-white font-black uppercase text-[10px] tracking-widest active:scale-95 transition-transform">
+            <button className="flex flex-col items-center gap-3 p-6 rounded-3xl bg-brand-green text-white font-black uppercase text-[10px] tracking-widest active:scale-95 transition-transform" onClick={() =>  navigateTo('/dashboard/receipts')}>
               <Plus size={20} /> Upload Receipt
             </button>
             <button className="flex flex-col items-center gap-3 p-6 rounded-3xl border-2 border-zinc-100 font-black uppercase text-[10px] tracking-widest active:scale-95 transition-transform">

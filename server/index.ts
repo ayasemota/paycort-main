@@ -3,9 +3,10 @@
  * Handles middleware configuration, database connection, and route initialization.
  */
 import express, { type Request, type Response, type Express } from "express";
-import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import connectDB from "./config/db.js" // Use your existing config
+import authRoutes from "./routes/auth.js" // Import the auth routes we just created
 
 // Initialize environment variables
 dotenv.config();
@@ -21,19 +22,14 @@ app.use(express.json());
 
 /**
  * Database Connection Setup
- * Connects to MongoDB using the URI provided in environment variables.
  */
-const MONGODB_URI = process.env.MONGO_URI || "mongodb://localhost:27017/paycort";
+connectDB(); // Replaces the inline mongoose.connect for cleaner code
 
-mongoose
-  .connect(MONGODB_URI)
-  .then(() => {
-    console.log("Database connection established successfully.");
-  })
-  .catch((error) => {
-    console.error("Database connection failed:", error.message);
-    process.exit(1);
-  });
+/**
+ * Route Initialization
+ */
+// Mount auth routes (Register/Login)
+app.use("/api/auth", authRoutes);
 
 /**
  * Root Health Check Route
