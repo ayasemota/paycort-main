@@ -34,6 +34,12 @@ export default function Login() {
       const result = await response.json();
       if (response.ok) {
         localStorage.setItem("paycort_token", result.token);
+        // Set cookie for Middleware (Server-Side) protection
+        // Expire in 7 days to match typical JWT validity
+        const expires = new Date();
+        expires.setDate(expires.getDate() + 7);
+        document.cookie = `paycort_token=${result.token}; path=/; expires=${expires.toUTCString()}; SameSite=Strict`;
+        
         navigateTo('/dashboard');
       } else {
         setServerError(result.message || "Invalid credentials");

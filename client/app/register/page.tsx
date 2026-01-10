@@ -35,6 +35,11 @@ export default function Register() {
       const result = await response.json();
       if (response.ok) {
         localStorage.setItem("paycort_token", result.token);
+        // Set cookie for Middleware (Server-Side) protection
+        const expires = new Date();
+        expires.setDate(expires.getDate() + 7);
+        document.cookie = `paycort_token=${result.token}; path=/; expires=${expires.toUTCString()}; SameSite=Strict`;
+
         navigateTo('/onboarding');
       } else {
         setServerError(result.message || "Something went wrong");
