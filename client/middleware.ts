@@ -44,6 +44,6 @@ export const config = {
      * - register
      * - learn (public page)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|login|register|learn).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|login|register).*)',
   ],
 };

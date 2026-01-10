@@ -144,7 +144,7 @@ export default function DashboardPage() {
             <button className="flex flex-col items-center gap-3 p-6 rounded-3xl bg-brand-green text-white font-black uppercase text-[10px] tracking-widest active:scale-95 transition-transform" onClick={() =>  navigateTo('/dashboard/receipts')}>
               <Plus size={20} /> Upload Receipt
             </button>
-            <button className="flex flex-col items-center gap-3 p-6 rounded-3xl border-2 border-zinc-100 font-black uppercase text-[10px] tracking-widest active:scale-95 transition-transform">
+            <button className="flex flex-col items-center gap-3 p-6 rounded-3xl border-2 border-zinc-100 font-black uppercase text-[10px] tracking-widest active:scale-95 transition-transform" onClick={() => navigateTo('/dashboard/transactions')}>
               <ListFilter size={20} /> Transactions
             </button>
           </div>
